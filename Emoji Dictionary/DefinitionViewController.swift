@@ -21,13 +21,24 @@ class DefinitionViewController: UIViewController {
         // Do any additional setup after loading the view.
         emojilabel.text=emoji
         
-        definitionlabel.text = "hello"
+        if emoji == "😀" {
+        definitionlabel.text = "A smiley face."
     }
+        if emoji == "💩" {
+            definitionlabel.text = "Pile of poop."
+        }
+        if emoji == "💀" {
+            definitionlabel.text = "Skull"
+        }
+        if emoji == "🐒" {
+            definitionlabel.text = "A curious monkey."
+        }
 
-    override func didReceiveMemoryWarning() {
+        func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
 
+}
 }
