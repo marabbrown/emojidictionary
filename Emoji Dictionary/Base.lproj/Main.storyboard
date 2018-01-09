@@ -56,22 +56,64 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a synagouge." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0d-wH-hvp">
-                                <rect key="frame" x="109.5" y="304.5" width="156" height="21"/>
+                                <rect key="frame" x="109.5" y="304.5" width="156" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jZZ-yZ-K1K">
+                                <rect key="frame" x="124.5" y="358" width="125.5" height="20.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hkM-Uk-L2Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="125.5" height="20.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sM9-W1-SRa">
+                                                <rect key="frame" x="0.0" y="0.0" width="125.5" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Category:Smiley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCp-1n-Yyu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="125.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="BCp-1n-Yyu" firstAttribute="top" secondItem="sM9-W1-SRa" secondAttribute="top" constant="20" symbolic="YES" id="w2n-03-Gkg"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QCH-ts-Ihm">
+                                <rect key="frame" x="127" y="407" width="121.5" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Birth year: 2010" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AST-yi-axM">
+                                        <rect key="frame" x="0.0" y="0.0" width="121.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AST-yi-axM" firstAttribute="top" secondItem="QCH-ts-Ihm" secondAttribute="top" constant="20" symbolic="YES" id="6BJ-pU-0i1"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wcF-hw-dDS" firstAttribute="centerX" secondItem="DU3-qK-RoK" secondAttribute="centerX" id="5Po-Ds-2e7"/>
                             <constraint firstItem="wcF-hw-dDS" firstAttribute="top" secondItem="six-3t-jYa" secondAttribute="top" constant="40" id="7xF-tF-a65"/>
+                            <constraint firstItem="jZZ-yZ-K1K" firstAttribute="centerX" secondItem="DU3-qK-RoK" secondAttribute="centerX" id="NVb-HT-eyH"/>
                             <constraint firstItem="j0d-wH-hvp" firstAttribute="top" secondItem="wcF-hw-dDS" secondAttribute="bottom" constant="50" id="XIZ-dX-xLw"/>
+                            <constraint firstItem="QCH-ts-Ihm" firstAttribute="centerX" secondItem="DU3-qK-RoK" secondAttribute="centerX" id="yMz-hN-huT"/>
                             <constraint firstItem="j0d-wH-hvp" firstAttribute="centerX" secondItem="DU3-qK-RoK" secondAttribute="centerX" id="zIO-yE-KQf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="six-3t-jYa"/>
                     </view>
                     <connections>
+                        <outlet property="birthYear" destination="AST-yi-axM" id="a8G-jj-E8X"/>
+                        <outlet property="categoryLabel" destination="BCp-1n-Yyu" id="gRr-X7-dO1"/>
                         <outlet property="definitionlabel" destination="j0d-wH-hvp" id="m59-gm-Eos"/>
                         <outlet property="emojilabel" destination="wcF-hw-dDS" id="z12-Zm-EAT"/>
                     </connections>
